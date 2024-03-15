@@ -29,7 +29,7 @@
         <td>{{ $val->name }}</td>
         <td>{{ $val->email }}</td>
         <td>{{ $val->phone }}</td>
-        <td><a href="{{ url('edit/'.$val->id )}}"><i class="fas fa-edit" aria-hidden="true"></i></a><a href="{{ url('delete/'.$val->id)}}"><i class="fa fa-trash" aria-hidden="true" style="color:red;font-size:20px;"></i></a>
+        <td><a href="{{ url('edit/'.$val->id )}}"><i class="fa fa-edit" style="font-size:24px"></i></a><a href="{{ url('delete/'.$val->id)}}"><i class="fa fa-trash" aria-hidden="true" style="color:red;font-size:24px;"></i></a>
         
 </td>
       </tr>
