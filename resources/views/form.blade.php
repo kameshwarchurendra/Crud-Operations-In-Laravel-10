@@ -13,20 +13,36 @@
 <div class="container">
   <form action="{{ url('store') }}" method="post">
     @csrf
+
   <div class="form-group">
-      <label for="text">Name:</label>
+      <label for="text">Name<span style="color:red">*<span></label>
       <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+      @error('name')
+        <div style="color:red">
+            {{$message}}
+        </div>
+      @enderror
     </div>
     <div class="form-group">
-      <label for="email">Email:</label>
+      <label for="email">Email<span style="color:red">*<span></label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      @error('email')
+        <div style="color:red">
+            {{$message}}
+        </div>
+      @enderror
     </div>
     <div class="form-group">
-      <label for="Phone">Phone:</label>
+      <label for="Phone">Phone<span style="color:red">*<span></label>
       <input type="number" class="form-control" id="phone" placeholder="Enter phone Number" name="phone">
+      @error('phone')
+        <div style="color:red">
+            {{$message}}
+        </div>
+      @enderror
     </div>
    
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
 
