@@ -35,6 +35,8 @@ class UserController extends Controller{
         $employee->save();
         
         return redirect('/')->with('success','Insert successfully');
+        
+        session()->flash('success', 'Insert successfully');
 
 
     }
@@ -60,6 +62,9 @@ class UserController extends Controller{
         $employee->save();
         return redirect('/')->with('success','Update successfully');
 
+        session()->flash('success', 'Update successfully');
+
+
     }
 
     public function delete(Request $request,$id){
@@ -67,6 +72,7 @@ class UserController extends Controller{
         $employee = Employee::where('id', $request->id)->first();
         $employee->delete();
         return redirect('/')->with('success','Delete successfully');
+        session()->flash('success', 'Delete successfully');
 
     } 
     
