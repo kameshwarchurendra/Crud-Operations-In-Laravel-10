@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Employee List</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,14 @@
 <div class="container mt-3">
   <h2>Employee List</h2>
  <a href="{{ url('add')}}"> <button class="btn btn-primary" style="float:right">Add Employee</button></a><br><br>
-  <table class="table table-bordered">
+ @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+        
+    </div>
+@endif
+ 
+ <table class="table table-bordered">
     <thead>
       <tr>
         <th>Name</th>
