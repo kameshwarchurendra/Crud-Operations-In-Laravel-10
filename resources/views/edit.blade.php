@@ -11,6 +11,8 @@
 <body>
 
 <div class="container">
+<h1>Update Employee</h1>
+
 @if(session('success'))
     <div class="alert alert-success">
         {{ session('success') }}
